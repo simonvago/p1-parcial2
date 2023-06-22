@@ -1,0 +1,342 @@
+*{
+    box-sizing: inherit;
+    box-sizing: border-box;
+}
+
+h1{
+    background-color: red;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 300;
+}
+
+body {
+    background-color: rgba(0, 0, 255, 0.779);
+    color: #ffffff;
+}
+
+header {
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+header h1 {
+    font-size: 6rem;
+    text-align: center;
+}
+
+header p {
+    font-size: 1.5em;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 2rem;
+    background-color: #070303;
+}
+
+main h2 {
+    font-size: 2rem;
+    margin: 4rem;
+    text-align: center;
+}
+
+main h3 {
+    font-size: 1rem;
+    width: 75%;
+    line-height: 1.5;
+    text-align: center;
+    min-height: 90px;
+}
+
+header #carritocompras {
+    display: flex;
+    direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content:center;
+    background-color: rgb(33, 194, 27);
+    margin: 3rem;
+    width: 50%;
+    z-index: 1;
+}
+
+header #carritocompras .detalle {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:space-evenly;
+    width: 100%;
+}
+
+header #carritocompras .filtros {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+header #carritocompras p span {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+header #carritocompras {
+        width: 70%;
+        margin: 3rem;
+}
+
+header button, #contenedorProductos .card .btn-verDetalle, #contenedorProductos .card .btn-agregarCarrito, .modalDetalle .datosProducto .detalleProducto .btn-agregarCarrito, header #carritocompras .filtros button, .modalCarrito .btn-vaciarCarrito, .modalCarrito .btn-compra, .btn-finCompra, .btnVolver {
+    margin: 1rem;
+    border: 1px solid blue;
+    border-radius: 1rem;
+    padding: 1rem;
+    background: black;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+}
+
+header button:hover, #contenedorProductos .card .btn-verDetalle:hover, #contenedorProductos .card .btn-agregarCarrito:hover, .modalDetalle .datosProducto .detalleProducto .btn-agregarCarrito:hover, .modalCarrito .btn-vaciarCarrito:hover, .modalCarrito .btn-compra:hover, .btn-finCompra:hover, .btnVolver:hover {
+    background: rgb(213, 11, 88);
+    border: 2px solid black;
+}
+
+
+/* Producto */
+#contenedorProductos {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Card Producto */
+#contenedorProductos p {
+    font-size: 2rem;
+    margin: 1rem;
+    line-height: 1;
+    text-align: center;
+}
+
+#contenedorProductos .card {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items:center;
+    margin: 1em;
+    width: 35%;
+    min-height: 1200px;
+    padding: 1rem;
+    border: 2px solid white;
+}
+
+
+#contenedorProductos .card img {
+    width: 75%;
+    margin: 2rem;
+    border: solid 2px black;
+    border-radius: 3%;
+}
+
+.modalDetalle, .modalCarrito, .modalCompra, .modalCompraRealizada {
+	position: fixed;
+	z-index: 2;
+    width: 70%;
+    margin: 6rem 15rem;
+    height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(127, 239, 14, 0.9);
+    overflow-y: auto; 
+    overflow-x: hidden;
+    padding: 2rem;
+}
+
+.datosProducto {
+    width: 80%;
+    height: 75%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+a{
+    color: #070303;
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 1.5em;
+    right: 1.5em;
+    border-radius: 2.5em;
+    font-size: 2rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.modalDetalle img {
+	width: 50%;
+    border: solid 2px black;
+}
+
+.detalleProducto {
+    width: 40%;
+    margin: 1% 10%;
+    height: 75%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: left;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.productosCarrito {
+    width: 80%;
+    margin: 1rem;
+    height: auto;
+	text-align: center;
+}
+
+.productosCarrito div {
+    margin: 1rem;
+    height: auto;
+	display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+	text-align: center;
+}
+
+.botonesCarrito{
+    width: 40%;
+}
+
+.totalesCarrito {
+    width: 80%;
+    margin: 1rem;
+	display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    flex-wrap: nowrap;
+	text-align: center;
+}
+
+.productosCarrito div p {
+    margin: 0 0 0 0;
+	text-align: center;
+}
+
+.totalesCarrito p {
+    width: 50%;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.botonesCarrito button {
+    width: 40%;
+    margin: 1rem;
+    text-align: center;
+}
+
+.productosCarrito div .masMenosProductos {
+    width: 40%;
+}
+
+.masMenosProductos button{
+    position: relative;
+    background-color:rgba(16, 181, 231, 0);
+    color: black;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+
+.modalDetalle h3, .modalCarrito h3, .modalCompra h3, .modalCompraRealizada h3 {
+    width: 100%;
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+
+.modalDetalle p, .modalCarrito p, .modalCompraRealizada p {
+	margin: 1rem;
+	text-align: left;
+    font-size: 1.5rem;
+}
+
+.modalCompra p {
+    width: 90%;
+	margin: 1rem;
+	text-align: center;
+    font-size: 1.5em;
+}
+
+/** Footer */
+footer {
+    width: 40%;
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+footer div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+footer div ul {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+article.card h3{
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+
